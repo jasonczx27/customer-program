@@ -29,5 +29,26 @@ you won't be able to login or proceed with the web operations otherwise.
 2. You would like to remove the current node_modules, in shell script: 'rm -rf /node_modules' at the respective proejct module, run 'npm install'
 3. Try to delete the package-lock.json as well if you're still stuck after steps 1-2, run 'npm install' after done so.
 
+# Showcase
+## login pages, light on and off
+![image](https://user-images.githubusercontent.com/68674815/124383094-3f31d880-dcfd-11eb-9c36-d44accbbb04b.png)
+![image](https://user-images.githubusercontent.com/68674815/124383106-4822aa00-dcfd-11eb-81b8-c62875964b1d.png)
+
+## some validations
+![image](https://user-images.githubusercontent.com/68674815/124383161-7902df00-dcfd-11eb-869e-51f478b6282a.png)
+![image](https://user-images.githubusercontent.com/68674815/124383169-84560a80-dcfd-11eb-9101-9515ba7bbd9f.png)
+
+
+## light off theme on main page, with tally data in database
+![image](https://user-images.githubusercontent.com/68674815/124383035-009c1e00-dcfd-11eb-8225-569928a0a85a.png)
+![image](https://user-images.githubusercontent.com/68674815/124383064-17427500-dcfd-11eb-9763-0f3512ad58ef.png)
+## light on theme
+![image](https://user-images.githubusercontent.com/68674815/124383083-2e816280-dcfd-11eb-93a4-09a92e7b276b.png)
+
+## accessing on some 'customer details'
+![image](https://user-images.githubusercontent.com/68674815/124383212-d1d27780-dcfd-11eb-917b-ab3f424dc866.png)
+
+## smaller screen sizes
+![image](https://user-images.githubusercontent.com/68674815/124383236-fc243500-dcfd-11eb-9ce1-7b856cd33b88.png)
 
 
