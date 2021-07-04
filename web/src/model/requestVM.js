@@ -15,8 +15,8 @@ class requestVM {
         this.issuccess=false;
         this.statuscode=code;
         this.errortype="http"
-        this.message=message??"the request failed";
-        this.errortype=!code? "Unknown":parseInt(code)==404? "Resource":parseInt(code)>=500&&parseInt(code)<600? "Server":"InvalidReq"
+        this.message=message? message:"the request failed";
+        this.errortype=!code? "Unknown":parseInt(code, 10)===404? "Resource":parseInt(code, 10)>=500&&parseInt(code, 10)<600? "Server":"InvalidReq"
         return this;
     }
 
@@ -25,7 +25,7 @@ class requestVM {
         this.issuccess=false;
         this.statuscode=401;
         this.errortype="Unauthorized"
-        this.message=message??"Could not authorize you to access this request"
+        this.message=message? message:"Could not authorize you to access this request"
         return this;
     }
     http_Success(data) {
@@ -42,13 +42,12 @@ class requestVM {
     req_Fail(reason, message) {
         this.status="error";
         this.issuccess=false;
-        this.errortype=reason??"not defined";
-        this.message=message??"the request failed";
+        this.errortype=reason? reason:"not defined";
+        this.message=message? message:"the request failed";
         return this;
     }
     req_noData() {
         this.status="error";
-        this.data=[];
         this.issuccess=false;
         this.errortype="No data";
         this.message="No data";

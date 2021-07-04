@@ -1,0 +1,45 @@
+.light {
+    --theme-color: #A80000;
+    --theme-content-background: #FFF;
+    --theme-header-background: #e8e8e8!important;
+    --theme-footer-background: #e8e8e8 !important;
+    --theme-page-text: rgba(0, 0, 0, 0.6);
+}
+
+.dark {
+    --theme-color: #0000A8 !important;
+    --theme-header-background: rgb(22, 25, 31)!important;
+    --theme-footer-background: rgb(22, 25, 31)!important;
+    --theme-content-background: #0b0d0f!important;
+    --theme-input-background: rgba(255, 255, 255, 0.3)!important;
+    --theme-page-text: #FFF !important;
+}
+
+* {
+    -webkit-transition: color 0.3s ease-in-out, background-color 0.3s linear;
+    -ms-transition: color 0.3s ease-in-out, background-color 0.3s linear;
+    transition: color 0.3s ease-in-out, background-color 0.3s linear;
+}
+
+header {
+    background: var(--theme-header-background) !important;
+    color: var(--theme-page-text) !important;
+}
+
+main,
+.top_panel,
+label,
+.antd-theme-text {
+    background: var(--theme-content-background) !important;
+    color: var(--theme-page-text) !important;
+}
+
+input {
+    background: var(--theme-input-background) !important;
+    color: var(--theme-page-text) !important;
+}
+
+footer {
+    background: var(--theme-footer-background) !important;
+    color: var(--theme-page-text) !important;
+}

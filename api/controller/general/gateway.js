@@ -1,9 +1,9 @@
-// const requestVM = require("../../model/general/requestVM")
+const requestVM = require("../../model/general/requestVM")
 require("../users")();
 
 module.exports = {
-    gateway: async function (req, res, next) {
-        var act = req.body.act || ''; //Gateway had to
+    gateway: async function(req, res, next) {
+        var act = req.body.action || ''; //Gateway had to
         var data = req.body.data || null;
         var auth = req.body.auth || null;
 
@@ -15,12 +15,11 @@ module.exports = {
             var fn = eval(`var f = function(){ return ${act}; }; f();`);
             var result = await controller(data, auth, fn);
             return res.status(result.statuscode ?? 200).json(result);
-        }
-        catch (e) {
+        } catch (e) {
             const reqResult = new requestVM().http_Fail(500, e)
             console.log(`
             Encountered exceptions in gateway. Error as below:
-            ${err}`);
+            ${e}`);
 
             return res.status(reqResult.statuscode).json(reqResult);
         }

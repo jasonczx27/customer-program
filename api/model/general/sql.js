@@ -1,7 +1,6 @@
-const mysql = require("mysql")
-const requestVM = require("./requestVM")
+const mysql=require("mysql")
 
-const con = mysql.createConnection({
+const con=mysql.createConnection({
     host: "db4free.net",
     user: "jasonczx27",
     port: "3306",
@@ -12,14 +11,14 @@ const con = mysql.createConnection({
 con.connect(function (err) {
     if (err) {
         console.log(err)
-        throw err
+        return
     }
     console.log("database connected")
 
 })
 
 
-module.exports = {
+module.exports={
     con,
     mysql
 }
